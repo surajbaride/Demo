@@ -1,18 +1,17 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import ProductListScreen from './component/Screen/ProductListScreen';
-import ProductDetailsScreen from './component/Screen/ProductDetailsScreen';
+import TabNavigator from './src/navigation/TabNavigator';
 
-const Stack = createStackNavigator();
-
-const App = () => (
-  <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen name="ProductList" component={ProductListScreen} />
-      <Stack.Screen name="ProductDetails" component={ProductDetailsScreen} />
-    </Stack.Navigator>
-  </NavigationContainer>
-);
+/**
+ * Main App Component
+ * Sets up navigation container with bottom tab navigation
+ */
+const App = () => {
+  return (
+    <NavigationContainer>
+      <TabNavigator />
+    </NavigationContainer>
+  );
+};
 
 export default App;
